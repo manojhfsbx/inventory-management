@@ -746,10 +746,10 @@ export default {
 .section-title {
   font-size: 1rem;
   font-weight: 600;
-  color: #475569;
+  color: var(--color-text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
 }
 
 .kpi-grid {
@@ -759,20 +759,27 @@ export default {
 }
 
 .kpi-card {
-  background: white;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 1rem;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.kpi-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
 }
 
 .kpi-header {
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--space-3);
 }
 
 .kpi-label {
   font-size: 0.813rem;
   font-weight: 600;
-  color: #64748b;
+  color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.025em;
 }
@@ -780,34 +787,34 @@ export default {
 .kpi-value {
   font-size: 2rem;
   font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 0.5rem;
+  color: var(--color-text-heading);
+  margin-bottom: var(--space-2);
   letter-spacing: -0.025em;
 }
 
 .kpi-goal {
   font-size: 0.813rem;
-  color: #64748b;
-  margin-bottom: 0.75rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
 }
 
 .kpi-progress-bar {
   width: 100%;
   height: 6px;
-  background: #f1f5f9;
+  background: var(--color-border-subtle);
   border-radius: 3px;
   overflow: hidden;
 }
 
 .kpi-progress {
   height: 100%;
-  background: #3b82f6;
+  background: var(--color-primary-accent);
   border-radius: 3px;
   transition: width 0.6s ease;
 }
 
 .kpi-progress.success {
-  background: #10b981;
+  background: var(--color-success);
 }
 
 .charts-grid {
@@ -883,7 +890,7 @@ export default {
 
 .donut-center-label {
   font-size: 12px;
-  fill: #64748b;
+  fill: var(--color-text-muted);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -891,7 +898,7 @@ export default {
 
 .donut-center-value {
   font-size: 36px;
-  fill: #0f172a;
+  fill: var(--color-text-heading);
   font-weight: 700;
 }
 
@@ -906,7 +913,7 @@ export default {
   align-items: center;
   gap: 0.5rem;
   font-size: 0.875rem;
-  color: #475569;
+  color: var(--color-text-secondary);
   font-weight: 500;
 }
 
@@ -928,7 +935,7 @@ export default {
 
 .health-metric-label {
   font-size: 0.688rem;
-  color: #64748b;
+  color: var(--color-text-muted);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -937,20 +944,20 @@ export default {
 .health-metric-value {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--color-text-heading);
   letter-spacing: -0.025em;
 }
 
 .metric-good {
-  color: #10b981;
+  color: var(--color-success);
 }
 
 .metric-warning {
-  color: #f59e0b;
+  color: var(--color-warning);
 }
 
 .metric-bad {
-  color: #ef4444;
+  color: var(--color-danger);
 }
 
 .horizontal-bar-chart {
@@ -963,7 +970,7 @@ export default {
 .h-bar-item {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-4);
 }
 
 .h-bar-label {
@@ -971,15 +978,15 @@ export default {
   min-width: 120px;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #475569;
+  color: var(--color-text-secondary);
   flex-shrink: 0;
 }
 
 .h-bar-container {
   flex: 1;
   height: 32px;
-  background: #f8fafc;
-  border-radius: 6px;
+  background: var(--color-bg-page);
+  border-radius: var(--radius-sm);
   overflow: hidden;
 }
 
@@ -988,7 +995,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 0.75rem;
+  padding-right: var(--space-3);
   transition: width 0.6s ease;
 }
 
@@ -1075,7 +1082,7 @@ export default {
 }
 
 .no-data {
-  padding: 2rem;
+  padding: var(--space-8);
   text-align: center;
   color: #94a3b8;
   font-size: 0.875rem;
@@ -1087,18 +1094,18 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-4);
 }
 
 .success-icon {
   width: 48px;
   height: 48px;
-  color: #10b981;
+  color: var(--color-success);
 }
 
 .no-backlog-text {
   font-size: 1.125rem;
-  color: #10b981;
+  color: var(--color-success);
   font-weight: 600;
   margin: 0;
 }
@@ -1109,7 +1116,7 @@ export default {
 }
 
 .clickable-row:hover {
-  background: #eff6ff !important;
+  background: var(--color-primary-bg) !important;
 }
 
 /* Tasks Card Styles */
@@ -1237,9 +1244,9 @@ export default {
 }
 
 .po-button {
-  padding: 0.5rem 1rem;
+  padding: var(--space-2) var(--space-4);
   border: none;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   font-size: 0.813rem;
   font-weight: 600;
   cursor: pointer;
@@ -1248,23 +1255,23 @@ export default {
 }
 
 .po-button.create {
-  background: #3b82f6;
+  background: var(--color-primary-accent);
   color: white;
 }
 
 .po-button.create:hover {
-  background: #2563eb;
+  background: var(--color-primary);
   transform: translateY(-1px);
   box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
 }
 
 .po-button.view {
-  background: #64748b;
+  background: var(--color-text-muted);
   color: white;
 }
 
 .po-button.view:hover {
-  background: #475569;
+  background: var(--color-text-secondary);
   transform: translateY(-1px);
   box-shadow: 0 2px 4px rgba(100, 116, 139, 0.3);
 }
